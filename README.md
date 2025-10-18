@@ -1,6 +1,6 @@
-# 👶 Bebina Shopping Lista
+# 👶 Newborn Baby Essentials
 
-Dinamička web stranica za organizaciju kupovine bebi opreme.
+Dinamička web stranica za organizaciju kupovine bebi opreme - DM narudžba.
 
 ## 📋 Kako koristiti
 
@@ -9,7 +9,7 @@ Dinamička web stranica za organizaciju kupovine bebi opreme.
 ### Brzi start:
 
 ```bash
-cd /Users/neven.ignjic/Data/Baby
+cd /Users/neven.ignjic/Data/newborn-baby-essentials
 ./start-server.sh
 ```
 

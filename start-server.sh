@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Starting web server for Baby Shopping List..."
+echo "🚀 Starting web server for Newborn Baby Essentials..."
 echo "📂 Server running at: http://localhost:8000"
 echo "🌐 Open this URL in your browser: http://localhost:8000/index.html"
 echo ""
