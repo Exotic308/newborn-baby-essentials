@@ -113,9 +113,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
     padding: 20px 0;
     border-bottom: 2px solid var(--accent-rose);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.store-header:hover {
+    background-color: var(--primary-cream);
+}
+
+.store-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .store-logo {
@@ -124,16 +135,50 @@ header {
     object-fit: contain;
 }
 
+.product-count {
+    font-size: 0.9em;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.store-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .store-total {
     font-size: 1.5em;
     font-weight: 700;
     color: var(--text-dark);
 }
 
+.toggle-arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--text-medium);
+    transition: transform 0.3s ease;
+}
+
+.toggle-arrow.rotated {
+    transform: rotate(-180deg);
+}
+
 .products-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 25px;
+    max-height: 5000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.products-list.collapsed {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
 }
 
 /* Product Card */
@@ -266,12 +311,28 @@ footer {
     .store-section {
         padding: 20px;
     }
+    .store-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
     .store-logo {
         max-height: 50px;
         max-width: 150px;
     }
+    .product-count {
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+    .store-right {
+        gap: 10px;
+    }
     .store-total {
         font-size: 1.2em;
+    }
+    .toggle-arrow {
+        width: 20px;
+        height: 20px;
     }
     .product-card {
         flex-direction: column;
@@ -301,8 +362,15 @@ footer {
     .welcome-section {
         padding: 35px 20px;
     }
+    .store-right {
+        gap: 8px;
+    }
     .store-total {
         font-size: 1em;
+    }
+    .toggle-arrow {
+        width: 18px;
+        height: 18px;
     }
     .product-price {
         font-size: 1.2em;

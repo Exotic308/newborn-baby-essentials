@@ -39,8 +39,9 @@ function calculateStoreTotal(products) {
 }
 
 // Function to create a store section
-function createStoreSection(store) {
+function createStoreSection(store, index) {
     const storeTotal = calculateStoreTotal(store.products);
+    const productCount = store.products ? store.products.length : 0;
     
     let productsHTML = '';
     if (store.products && store.products.length > 0) {
@@ -49,15 +50,38 @@ function createStoreSection(store) {
     
     return `
         <section class="store-section">
-            <div class="store-header">
-                <img src="${store.logo}" alt="${store.name}" class="store-logo">
-                <div class="store-total">${storeTotal} BAM</div>
+            <div class="store-header" onclick="toggleStore('${store.id}')">
+                <div class="store-info">
+                    <img src="${store.logo}" alt="${store.name}" class="store-logo">
+                    <span class="product-count" style="white-space: nowrap;">${productCount} proizvoda</span>
+                </div>
+                <div class="store-right">
+                    <div class="store-total">${storeTotal} BAM</div>
+                    <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </div>
             </div>
-            <div class="products-list">
+            <div class="products-list" id="store-${store.id}">
                 ${productsHTML}
             </div>
         </section>
     `;
+}
+
+// Function to toggle store visibility
+function toggleStore(storeId) {
+    const productsList = document.getElementById(`store-${storeId}`);
+    const storeSection = productsList.closest('.store-section');
+    const arrow = storeSection.querySelector('.toggle-arrow');
+    
+    if (productsList.classList.contains('collapsed')) {
+        productsList.classList.remove('collapsed');
+        arrow.classList.remove('rotated');
+    } else {
+        productsList.classList.add('collapsed');
+        arrow.classList.add('rotated');
+    }
 }
 
 // Function to add to cart (placeholder)
@@ -82,8 +106,8 @@ function loadProducts() {
             const container = document.getElementById('stores-container');
             
             // Create sections for each store
-            stores.forEach(store => {
-                const section = createStoreSection(store);
+            stores.forEach((store, index) => {
+                const section = createStoreSection(store, index);
                 container.innerHTML += section;
             });
 
