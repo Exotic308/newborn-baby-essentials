@@ -53,7 +53,7 @@ function createStoreSection(store, index) {
             <div class="store-header" onclick="toggleStore('${store.id}')">
                 <div class="store-info">
                     <img src="${store.logo}" alt="${store.name}" class="store-logo">
-                    <span class="product-count" style="white-space: nowrap;">${productCount} proizvoda</span>
+                    <span class="product-count">${productCount} proizvoda</span>
                 </div>
                 <div class="store-right">
                     <div class="store-total">${storeTotal} BAM</div>
