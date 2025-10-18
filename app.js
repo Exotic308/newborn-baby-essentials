@@ -1,9 +1,12 @@
 // Store configuration
 const storeConfig = {
     'dm': {
-        icon: '🛒',
-        name: 'DM',
-        fullName: 'DM drogerie markt'
+        logo: 'stores/dm.jpg',
+        name: 'DM'
+    },
+    'aksa': {
+        logo: 'stores/aksa.png',
+        name: 'Aksa'
     }
 };
 
@@ -34,9 +37,24 @@ function createProductCard(product) {
     `;
 }
 
+// Function to calculate store total
+function calculateStoreTotal(storeData) {
+    let total = 0;
+    if (storeData.general) {
+        storeData.general.forEach(product => {
+            if (product.price) {
+                const price = parseFloat(product.price.replace(',', '.'));
+                total += price;
+            }
+        });
+    }
+    return total.toFixed(2).replace('.', ',');
+}
+
 // Function to create a store section
 function createStoreSection(storeKey, storeData) {
     const config = storeConfig[storeKey];
+    const storeTotal = calculateStoreTotal(storeData);
     
     let productsHTML = '';
     if (storeData.general && storeData.general.length > 0) {
@@ -46,8 +64,8 @@ function createStoreSection(storeKey, storeData) {
     return `
         <section class="store-section">
             <div class="store-header">
-                <h2>${config.icon} ${config.name}</h2>
-                <div class="store-badge">${config.fullName}</div>
+                <img src="${config.logo}" alt="${config.name}" class="store-logo">
+                <div class="store-total">${storeTotal} BAM</div>
             </div>
             <div class="products-list">
                 ${productsHTML}

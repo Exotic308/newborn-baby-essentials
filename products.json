@@ -181,5 +181,75 @@
       }
     ],
     "porodiliste": []
+  },
+  "aksa": {
+    "storeName": "Aksa",
+    "storeNameFull": "Aksa BIH",
+    "general": [
+      {
+        "name": "Ivona kupko, bela",
+        "brand": "IVONA NEW",
+        "details": "Podmetač za kadu",
+        "price": "13,50",
+        "image": "images/aksa-ivona-kupko.jpg",
+        "link": "https://www.aksabih.ba/podmetaci-i-podloge-za-kadu/2136-ivona-kupkobela"
+      },
+      {
+        "name": "Baby Spa posuda za ispiranje",
+        "brand": "BABY SPA",
+        "details": "Bokal za kupanje",
+        "price": "3,00",
+        "image": "images/aksa-baby-spa-posuda.jpg",
+        "link": "https://www.aksabih.ba/bokali-i-posude-za-kupanje/43546-baby-spa-posuda-za-ispiranje"
+      },
+      {
+        "name": "Peškir sa kapuljačom 80x80cm (rozi)",
+        "brand": "Lillo&Pippo",
+        "details": "Peškir za kupanje",
+        "price": "13,00",
+        "image": "images/aksa-lillo-peskir-1.jpg",
+        "link": "https://www.aksabih.ba/peskiri-i-setovi-za-kupanje/39708-lillopippo-peskir-sa-kapuljacom-80x80cm"
+      },
+      {
+        "name": "Peškir sa kapuljačom 80x80cm (plavi)",
+        "brand": "Lillo&Pippo",
+        "details": "Peškir za kupanje",
+        "price": "13,00",
+        "image": "images/aksa-lillo-peskir-2.jpg",
+        "link": "https://www.aksabih.ba/peskiri-i-setovi-za-kupanje/39709-lillopippo-peskir-sa-kapuljacom-80x80cm"
+      },
+      {
+        "name": "Peškir sa kapuljačom 80x80cm (beli)",
+        "brand": "Lillo&Pippo",
+        "details": "Peškir za kupanje",
+        "price": "13,00",
+        "image": "images/aksa-lillo-peskir-3.jpg",
+        "link": "https://www.aksabih.ba/peskiri-i-setovi-za-kupanje/39710-lillopippo-peskir-sa-kapuljacom-80x80cm"
+      },
+      {
+        "name": "Stefan tetra pelena Partizan",
+        "brand": "STEFAN",
+        "details": "Tetra pelena",
+        "price": "6,20",
+        "image": "images/aksa-stefan-pelena.jpg",
+        "link": "https://www.aksabih.ba/pelene/61451-stefan-tetra-pelena-partizan"
+      },
+      {
+        "name": "Tetra pelene 3u1",
+        "brand": "Lillo&Pippo",
+        "details": "Set tetra pelena",
+        "price": "9,90",
+        "image": "images/aksa-lillo-tetra.jpg",
+        "link": "https://www.aksabih.ba/pelene/41837-lillopippo-tetra-pelene-3u1"
+      },
+      {
+        "name": "Švedska pelena, bijela",
+        "brand": "Lillo&Pippo",
+        "details": "8 kom. (Veličina 74)",
+        "price": "18,40",
+        "image": "images/aksa-lillo-svedska.jpg",
+        "link": "https://www.aksabih.ba/svedske-pelene/9267-lillopippo-svedska-pelenabijela"
+      }
+    ]
   }
 }

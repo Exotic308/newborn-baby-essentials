@@ -70,21 +70,20 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
-    padding-bottom: 15px;
+    padding: 20px 0;
     border-bottom: 2px solid var(--accent-rose);
 }
 
-.store-header h2 {
-    font-size: 1.8em;
-    font-weight: 400;
+.store-logo {
+    max-height: 60px;
+    max-width: 200px;
+    object-fit: contain;
 }
 
-.store-badge {
-    background: var(--accent-rose);
+.store-total {
+    font-size: 1.5em;
+    font-weight: 700;
     color: var(--text-dark);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.9em;
 }
 
 .products-list {
@@ -204,9 +203,12 @@ footer {
     .store-section {
         padding: 20px;
     }
-    .store-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .store-logo {
+        max-height: 50px;
+        max-width: 150px;
+    }
+    .store-total {
+        font-size: 1.2em;
     }
     .product-card {
         flex-direction: column;
@@ -226,6 +228,9 @@ footer {
 @media (max-width: 480px) {
     .welcome-section {
         padding: 35px 20px;
+    }
+    .store-total {
+        font-size: 1em;
     }
     .product-price {
         font-size: 1.2em;
